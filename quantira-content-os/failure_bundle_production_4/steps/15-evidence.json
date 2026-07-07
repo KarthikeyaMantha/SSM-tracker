@@ -1,0 +1,8 @@
+[
+  {
+    "kind": "snapshot",
+    "stepIndex": 15,
+    "summary": "Step 15 'Open the 'QA E2E Content Title' card by clicking the card titled 'QA E2E Content Title' to access its detail view' passed.",
+    "path": "steps/15-snapshot.html"
+  }
+]

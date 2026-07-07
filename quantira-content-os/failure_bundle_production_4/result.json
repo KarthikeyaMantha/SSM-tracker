@@ -1,0 +1,18 @@
+{
+  "testId": "69e11528-e66a-40de-abb4-74ad6bb3c382",
+  "status": "blocked",
+  "startedAt": "2026-07-07T08:27:28.169Z",
+  "finishedAt": "2026-07-07T08:40:24.967Z",
+  "videoUrl": "https://testsprite-videos.s3.us-east-1.amazonaws.com/4408c498-1031-7098-9c3f-dd7d0dc55fa1/1783413624694103//tmp/e801d46e-825e-4748-9b4c-d89b759c13af/result.webm",
+  "failureAnalysisUrl": null,
+  "snapshotId": "snap_519a458bde621fa0",
+  "runIdIfAvailable": "89392697-d80e-4347-a7b9-0a0df5d47804",
+  "codeVersion": "v1",
+  "targetUrl": "https://abcb59b478cfda2b-49-43-233-62.serveousercontent.com",
+  "targetUrlSource": "run",
+  "failedStepIndex": 16,
+  "failureKind": null,
+  "verdict": "blocked",
+  "executionStatus": "completed",
+  "summary": "Blocked before a verdict could be produced: TEST BLOCKED: Clicked div role=button \"QA E2E Content Title\nCNT-QA01\n...\""
+}

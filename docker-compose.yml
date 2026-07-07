@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  # 1. PostgreSQL Database
+  db:
+    image: postgres:15-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: quantira_admin
+      POSTGRES_PASSWORD: ${DB_PASSWORD} # Loaded from .env
+      POSTGRES_DB: quantira_os
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql # Auto-runs schema on first boot
+    ports:
+      - "5432:5432"
+
+  # 2. Streamlit Web Application
+  webapp:
+    build: .
+    restart: always
+    ports:
+      - "8501:8501"
+    environment:
+      - DATABASE_URL=postgresql://quantira_admin:${DB_PASSWORD}@db:5432/quantira_os
+      - SLACK_WEBHOOK_URL=${SLACK_WEBHOOK_URL}
+    depends_on:
+      - db
+
+  # 3. Background Alert Scheduler
+  scheduler:
+    build: .
+    command: python alert_scheduler.py
+    restart: always
+    environment:
+      - DATABASE_URL=postgresql://quantira_admin:${DB_PASSWORD}@db:5432/quantira_os
+      - SLACK_WEBHOOK_URL=${SLACK_WEBHOOK_URL}
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:

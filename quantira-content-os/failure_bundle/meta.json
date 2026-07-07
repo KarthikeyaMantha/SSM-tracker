@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "cli-v1",
+  "snapshotId": "snap_e10af5d5889c41ac",
+  "testId": "a68ce85a-e994-42c9-bf76-c54befbe9dee",
+  "projectId": "d53cced4-90bc-49f1-b5a3-636d2da1b9be",
+  "codeVersion": "v1",
+  "runIdIfAvailable": "c948114a-a287-4865-beab-06540fbe0e68",
+  "targetUrl": "https://yummy-keys-glow.loca.lt",
+  "failedStepIndex": 25,
+  "failureKind": null,
+  "capturedAt": "2026-07-06T11:24:27.025Z",
+  "fetchedAt": "2026-07-06T11:29:24.967Z"
+}

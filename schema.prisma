@@ -1,0 +1,74 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Client {
+  clientName      String     @id
+  industry        String?
+  accountManager  String?
+  monthlyRetainer Float?     @default(0)
+  startDate       DateTime?
+  status          String     @default("Active")
+  campaigns       Campaign[]
+  contentMaster   ContentMaster[]
+  createdAt       DateTime   @default(now())
+  updatedAt       DateTime   @updatedAt
+}
+
+model Campaign {
+  campaignId      String     @id
+  clientId        String
+  client          Client     @relation(fields: [clientId], references: [clientName], onDelete: Cascade)
+  campaignName    String
+  goal            String?
+  budget          Float?
+  startDate       DateTime?
+  endDate         DateTime?
+  status          String     @default("Planning")
+  expectedLeads   Int?       @default(0)
+  expectedRevenue Float?     @default(0)
+  contentMaster   ContentMaster[]
+  createdAt       DateTime   @default(now())
+  updatedAt       DateTime   @updatedAt
+}
+
+model ContentMaster {
+  contentId       String     @id
+  campaignId      String?
+  campaign        Campaign?  @relation(fields: [campaignId], references: [campaignId], onDelete: SetNull)
+  clientId        String?
+  client          Client?    @relation(fields: [clientId], references: [clientName], onDelete: SetNull)
+  contentTitle    String
+  topic           String?
+  contentPillar   String?
+  funnelStage     String?
+  targetPersona   String?
+  painPoint       String?
+  contentAngle    String?
+  platform        String
+  contentFormat   String?
+  language        String     @default("English")
+  objective       String?
+  cta             String?
+  priority        String     @default("Normal")
+  owner           String?
+  publishDate     DateTime?
+  publishTime     String?
+  status          String     @default("Draft")
+  daysRemaining   Int?       @default(0)
+  healthStatus    String     @default("On Track")
+  month           String?
+  week            Int?
+  quarter         String?
+  caption         String?
+  hashtags        String?
+  canvaLink       String?
+  driveLink       String?
+  createdAt       DateTime   @default(now())
+  updatedAt       DateTime   @updatedAt
+}

@@ -1,0 +1,5 @@
+{
+  "rootCauseHypothesis": "TEST BLOCKED\n\nThe test could not be run — the application is unavailable due to an HTTP 502 error and the dashboard/production UI cannot be reached.\n\nObservations:\n- The Dashboard page displays 'HTTP ERROR 502' with a 'Reload' button.\n- Clicking 'Reload' was attempted twice and the page remained on the 502 error.\n- The Content Production route previously showed an unhandled runtime error and the SPA failed to render, leaving no interactive production UI available.",
+  "recommendedFixTarget": null,
+  "evidence": []
+}

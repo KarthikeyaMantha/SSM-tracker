@@ -1,0 +1,29 @@
+credentials:
+  usernames:
+    admin:
+      email: admin@quantira.com
+      name: Admin User
+      password: $2b$12$eao3Dsc3imCa8wNiEvJ6b.zAsfM10xUChjmXsMXkCdLnNSl8eFCE6
+    kartar:
+      email: kartar@quantira.com
+      name: Kartar Manager
+      password: $2b$12$099.sEhRTysneUZ3SHyGS.BujM.TiEUZISlDxl4.Scxn77Sn7AFBu
+    rahul:
+      email: rahul@quantira.com
+      name: Rahul Copywriter
+      password: $2b$12$o1NkDy2cTUAi/pc6qk1uRuTMCi0ocsUvH3fimiTJWvZV1D75EY0v2
+    sneha:
+      email: sneha@quantira.com
+      name: Sneha Designer
+      password: $2b$12$qNMjtMjz6Ta3uWVShdoNcu38OAiBaFAggDu713z5iBMR00QplaluW
+    vikram:
+      email: vikram@quantira.com
+      name: Vikram Reviewer
+      password: $2b$12$4EsbmEuwb6.8O1yi5e8SNeEGq5X4OtEu0NdV67PrzxwbXp0u1FEJS
+cookie:
+  expiry_days: 30
+  key: quantira_secret_key
+  name: quantira_cookie
+preauthorized:
+  emails:
+    - preauthorized@quantira.com

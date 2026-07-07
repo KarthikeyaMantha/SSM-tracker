@@ -1,0 +1,17 @@
+credentials:
+  usernames:
+    admin:
+      email: admin@quantira.com
+      name: Admin User
+      password: $2b$12$vS1Bxj6PasecRk3O4TJgkuCmIzQ2FcuYZNDbGYn6vIWa9bSBugAk2
+    manager:
+      email: manager@quantira.com
+      name: Content Manager
+      password: $2b$12$DQsB/L0yq.atZDagCIxCnuSGSSp0UfjDmY9Y9ZqmdV2SqH/34tsi.
+cookie:
+  expiry_days: 30
+  key: quantira_secret_key
+  name: quantira_cookie
+pre-authorized:
+  emails:
+    - preauthorized@quantira.com

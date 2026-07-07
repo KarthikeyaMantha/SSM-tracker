@@ -1,0 +1,19 @@
+{
+  "projectId": "d53cced4-90bc-49f1-b5a3-636d2da1b9be",
+  "type": "frontend",
+  "name": "Content Production Status Update",
+  "description": "An admin logs in, navigates to the Content Production dashboard, locates the card for QA E2E Content Title, and changes the production status to In Progress.",
+  "priority": "p1",
+  "planSteps": [
+    { "type": "action", "description": "Navigate to the application login page" },
+    { "type": "action", "description": "If a warning, reminder, or interstitial page appears with a button to continue (such as Click to Continue or Continue to Site), click that button to proceed to the application" },
+    { "type": "action", "description": "Enter admin@quantira.com into the email address input field" },
+    { "type": "action", "description": "Enter admin123 into the password input field" },
+    { "type": "action", "description": "Click the Sign In button" },
+    { "type": "action", "description": "Click the Content Production sidebar navigation link" },
+    { "type": "assertion", "description": "Verify that a production card containing the text QA E2E Content Title is visible on the page" },
+    { "type": "action", "description": "Click the status select dropdown selector inside the production card for QA E2E Content Title" },
+    { "type": "action", "description": "Select and click the In Progress status option from the dropdown menu" },
+    { "type": "assertion", "description": "Verify that the status select dropdown inside the production card now shows In Progress" }
+  ]
+}

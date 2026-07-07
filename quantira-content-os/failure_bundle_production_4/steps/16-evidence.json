@@ -1,0 +1,8 @@
+[
+  {
+    "kind": "snapshot",
+    "stepIndex": 16,
+    "summary": "Step 16 'Production card with the title \"QA E2E Content Title\" is visible on the page.' failed. Error: TEST BLOCKED: Clicked div role=button \"QA E2E Content Title\nCNT-QA01\n...\"",
+    "path": "steps/16-snapshot.html"
+  }
+]

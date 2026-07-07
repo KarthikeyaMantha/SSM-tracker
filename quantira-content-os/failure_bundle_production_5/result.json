@@ -1,0 +1,18 @@
+{
+  "testId": "69e11528-e66a-40de-abb4-74ad6bb3c382",
+  "status": "blocked",
+  "startedAt": "2026-07-07T08:45:33.388Z",
+  "finishedAt": "2026-07-07T08:51:45.698Z",
+  "videoUrl": "https://testsprite-videos.s3.us-east-1.amazonaws.com/4408c498-1031-7098-9c3f-dd7d0dc55fa1/1783414305324867//tmp/3b4f8239-8052-49b9-8c38-f771207a70fc/result.webm",
+  "failureAnalysisUrl": null,
+  "snapshotId": "snap_a8211ff0092f61b8",
+  "runIdIfAvailable": "427f34d8-8fc7-434f-908d-07a9d7762226",
+  "codeVersion": "v1",
+  "targetUrl": "https://06b88afc92271896-49-43-233-62.serveousercontent.com",
+  "targetUrlSource": "run",
+  "failedStepIndex": 9,
+  "failureKind": null,
+  "verdict": "blocked",
+  "executionStatus": "completed",
+  "summary": "Blocked before a verdict could be produced: TEST BLOCKED\n\nThe test could not be run — the application is unavailable due to an HTTP 502 error and the dashboard/production UI cannot be reached.\n\nObservations:\n- The Dashboard page displays 'HTTP ERROR 502' with a 'Reload' button.\n- Clicking 'Reload' was attempted twice and the page remained on the 502 error.\n- The Content Production route previously showed an unhandled runtime error and the SPA failed to render, leaving no interactive production …"
+}

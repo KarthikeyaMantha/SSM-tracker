@@ -1,0 +1,17 @@
+{
+  "projectId": "d53cced4-90bc-49f1-b5a3-636d2da1b9be",
+  "type": "frontend",
+  "name": "Admin Authentication and Dashboard Navigation",
+  "description": "An admin logs in with valid credentials, is redirected to the home dashboard, and then navigates to the Clients view to verify that client records are visible.",
+  "priority": "p0",
+  "planSteps": [
+    { "type": "action", "description": "Navigate to the application login page" },
+    { "type": "action", "description": "If a warning, reminder, or interstitial page appears with a button to continue (such as Click to Continue or Continue to Site), click that button to proceed to the application" },
+    { "type": "action", "description": "Enter admin@quantira.com into the email address input field" },
+    { "type": "action", "description": "Enter admin123 into the password input field" },
+    { "type": "action", "description": "Click the Sign In button" },
+    { "type": "assertion", "description": "Verify that the page title or main heading matches Dashboard" },
+    { "type": "action", "description": "Click the Clients sidebar navigation link" },
+    { "type": "assertion", "description": "Verify that the clients table or list is visible and contains a row with text QA E2E Client" }
+  ]
+}

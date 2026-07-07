@@ -1,0 +1,5 @@
+{
+  "rootCauseHypothesis": "TEST BLOCKED\n\nThe application could not be reached due to a server error; the test cannot proceed.\n\nObservations:\n- The page displays 'HTTP ERROR 502' indicating the server is currently unable to handle the request.\n- A 'Reload' button is visible on the page.\n- The application login page and subsequent UI are not accessible, so login and downstream actions cannot be performed.",
+  "recommendedFixTarget": null,
+  "evidence": []
+}

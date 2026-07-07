@@ -1,0 +1,18 @@
+{
+  "testId": "a68ce85a-e994-42c9-bf76-c54befbe9dee",
+  "status": "blocked",
+  "startedAt": "2026-07-06T11:12:47.956Z",
+  "finishedAt": "2026-07-06T11:24:27.025Z",
+  "videoUrl": "https://testsprite-videos.s3.us-east-1.amazonaws.com/4408c498-1031-7098-9c3f-dd7d0dc55fa1/1783337066767673//tmp/ce846c4e-1f0b-47a4-93a8-41166241999e/result.webm",
+  "failureAnalysisUrl": null,
+  "snapshotId": "snap_e10af5d5889c41ac",
+  "runIdIfAvailable": "c948114a-a287-4865-beab-06540fbe0e68",
+  "codeVersion": "v1",
+  "targetUrl": "https://yummy-keys-glow.loca.lt",
+  "targetUrlSource": "run",
+  "failedStepIndex": 25,
+  "failureKind": null,
+  "verdict": "blocked",
+  "executionStatus": "completed",
+  "summary": "Blocked before a verdict could be produced: TEST BLOCKED: Clicked button \"Sign In\""
+}

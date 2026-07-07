@@ -1,0 +1,39 @@
+# Dependency directories
+node_modules/
+/quantira-content-os/node_modules/
+/quantira-content-os/.next/
+
+# Next.js build outputs and caches
+/quantira-content-os/out/
+/quantira-content-os/build/
+/quantira-content-os/dist/
+/quantira-content-os/tsconfig.tsbuildinfo
+/quantira-content-os/test-results/
+/quantira-content-os/playwright-report/
+
+# Python caching & environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+*.log
+
+# Databases & local executables
+*.db
+*.sqlite
+sqlite3.exe
+
+# Environment & config secrets
+.env
+.env*.local
+/quantira-content-os/.env
+/quantira-content-os/.env*.local
+
+# IDEs & System files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,8 @@
+[
+  {
+    "kind": "snapshot",
+    "stepIndex": 19,
+    "summary": "Step 19 'Click the 'QA E2E Content Title' entry in the Approval Pipeline on the right to open its details' passed.",
+    "path": "steps/19-snapshot.html"
+  }
+]

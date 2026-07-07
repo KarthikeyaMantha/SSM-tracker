@@ -1,0 +1,8 @@
+[
+  {
+    "kind": "snapshot",
+    "stepIndex": 23,
+    "summary": "Step 23 'Production card with title 'QA E2E Content Title' is visible on the page.' failed. Error: TEST BLOCKED: Clicked a \"Content Production\"",
+    "path": "steps/23-snapshot.html"
+  }
+]

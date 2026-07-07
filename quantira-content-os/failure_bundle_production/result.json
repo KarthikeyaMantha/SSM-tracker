@@ -1,0 +1,18 @@
+{
+  "testId": "69e11528-e66a-40de-abb4-74ad6bb3c382",
+  "status": "blocked",
+  "startedAt": "2026-07-07T07:10:05.396Z",
+  "finishedAt": "2026-07-07T07:23:04.464Z",
+  "videoUrl": "https://testsprite-videos.s3.us-east-1.amazonaws.com/4408c498-1031-7098-9c3f-dd7d0dc55fa1/1783408984190989//tmp/0d7ebaa4-2541-409c-862d-f767fd215679/result.webm",
+  "failureAnalysisUrl": null,
+  "snapshotId": "snap_ad527679beb4e963",
+  "runIdIfAvailable": "9ebb3194-fd1e-45f9-b1e6-6b4648240619",
+  "codeVersion": "v1",
+  "targetUrl": "https://59f27fdc7db6e66c-49-43-233-62.serveousercontent.com",
+  "targetUrlSource": "run",
+  "failedStepIndex": 23,
+  "failureKind": null,
+  "verdict": "blocked",
+  "executionStatus": "completed",
+  "summary": "Blocked before a verdict could be produced: TEST BLOCKED: Clicked a \"Content Production\""
+}

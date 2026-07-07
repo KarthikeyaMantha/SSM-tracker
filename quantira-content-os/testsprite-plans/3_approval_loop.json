@@ -1,0 +1,21 @@
+{
+  "projectId": "d53cced4-90bc-49f1-b5a3-636d2da1b9be",
+  "type": "frontend",
+  "name": "Approvals and Feedback Loop",
+  "description": "An admin logs in, navigates to the Approvals view, requests a revision for QA E2E Content Title, submits revision instructions, and checks that the instructions are recorded.",
+  "priority": "p1",
+  "planSteps": [
+    { "type": "action", "description": "Navigate to the application login page" },
+    { "type": "action", "description": "If a warning, reminder, or interstitial page appears with a button to continue (such as Click to Continue or Continue to Site), click that button to proceed to the application" },
+    { "type": "action", "description": "Enter admin@quantira.com into the email address input field" },
+    { "type": "action", "description": "Enter admin123 into the password input field" },
+    { "type": "action", "description": "Click the Sign In button" },
+    { "type": "action", "description": "Click the Approvals sidebar navigation link" },
+    { "type": "assertion", "description": "Verify that an approval card containing the text QA E2E Content Title is visible" },
+    { "type": "action", "description": "Click the Request Revision button on the card for QA E2E Content Title" },
+    { "type": "action", "description": "Type Needs CTA link fixes and font check. into the revision instructions feedback text area input field" },
+    { "type": "action", "description": "Click the Send Instructions submission button" },
+    { "type": "action", "description": "Click the Expand details button on the card for QA E2E Content Title" },
+    { "type": "assertion", "description": "Verify that a feedback list or badge is visible containing the text Needs CTA link fixes" }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "testId": "69e11528-e66a-40de-abb4-74ad6bb3c382",
+  "status": "blocked",
+  "startedAt": "2026-07-07T08:19:40.192Z",
+  "finishedAt": "2026-07-07T08:20:40.345Z",
+  "videoUrl": "https://testsprite-videos.s3.us-east-1.amazonaws.com/4408c498-1031-7098-9c3f-dd7d0dc55fa1/1783412440065249//tmp/173b49a1-972a-4ae8-96d6-d1a48cacf124/result.webm",
+  "failureAnalysisUrl": null,
+  "snapshotId": "snap_8ba69db52b164ccc",
+  "runIdIfAvailable": "692f7a93-2186-4b28-82f4-5f64e171f542",
+  "codeVersion": "v1",
+  "targetUrl": "https://abcb59b478cfda2b-49-43-233-62.serveousercontent.com",
+  "targetUrlSource": "run",
+  "failedStepIndex": 3,
+  "failureKind": null,
+  "verdict": "blocked",
+  "executionStatus": "completed",
+  "summary": "Blocked before a verdict could be produced: TEST BLOCKED\n\nThe application could not be reached due to a server error; the test cannot proceed.\n\nObservations:\n- The page displays 'HTTP ERROR 502' indicating the server is currently unable to handle the request.\n- A 'Reload' button is visible on the page.\n- The application login page and subsequent UI are not accessible, so login and downstream actions cannot be performed."
+}
