@@ -29,7 +29,9 @@ async function main() {
     { email: 'copywriter@quantira.com', name: 'Jane Copywriter', password: 'copywriter123', role: 'COPYWRITER' },
     { email: 'designer@quantira.com', name: 'Dave Designer', password: 'designer123', role: 'DESIGNER' },
     { email: 'reviewer@quantira.com', name: 'Sneha Reviewer', password: 'reviewer123', role: 'REVIEWER' },
-    { email: 'client@acmecorp.com', name: 'Acme Admin', password: 'client123', role: 'CLIENT', clientName: 'Acme Corp' }
+    { email: 'client@acmecorp.com', name: 'Acme Admin', password: 'client123', role: 'CLIENT', clientName: 'Acme Corp' },
+    { email: 'client@globalhealth.com', name: 'Global Health Admin', password: 'client123', role: 'CLIENT', clientName: 'Global Health' },
+    { email: 'client@ecoretail.com', name: 'Eco Retail Admin', password: 'client123', role: 'CLIENT', clientName: 'Eco Retail' }
   ]
 
   for (const u of usersToCreate) {
