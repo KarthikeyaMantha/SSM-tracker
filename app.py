@@ -10,6 +10,10 @@ from yaml.loader import SafeLoader
 import functools
 import inspect
 
+# Auto-initialize database on first run (required for Streamlit Cloud)
+import setup_db
+setup_db.init_db()
+
 # --- PAGE CONFIG ---
 st.set_page_config(
     page_title="Quantira Content OS",
