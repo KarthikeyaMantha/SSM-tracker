@@ -37,16 +37,6 @@ export async function middleware(req: NextRequest) {
     cookieName
   })
 
-  // DEBUG LOGS
-  console.log("--- MIDDLEWARE DEBUG ---")
-  console.log("Path:", req.nextUrl.pathname)
-  console.log("Cookies list:", Array.from(req.cookies.getAll()).map(c => c.name))
-  console.log("Secret length:", secret?.length)
-  console.log("Token decoded successfully:", !!token)
-  if (token) {
-    console.log("User Role:", (token as any).role)
-  }
-
   const { pathname } = req.nextUrl
 
   // 1. Allow NextAuth authentication routes automatically
