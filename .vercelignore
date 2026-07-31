@@ -1,0 +1,15 @@
+# Ignore root-level Python files so Vercel does not build them as Serverless Functions
+app.py
+alert_scheduler.py
+alerts.py
+initialize_db.py
+setup_db.py
+requirements.txt
+config.yaml
+auth_config.yaml
+marketing.db
+*.db
+*.sql
+*.exe
+docker-compose.yml
+Dockerfile
