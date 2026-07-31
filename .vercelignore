@@ -13,3 +13,6 @@ marketing.db
 *.exe
 docker-compose.yml
 Dockerfile
+.env
+.env.local
+.env.*
