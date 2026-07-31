@@ -1,0 +1,401 @@
+<html xmlns:o='urn:schemas-microsoft-com:office:office' 
+      xmlns:w='urn:schemas-microsoft-com:office:word' 
+      xmlns='http://www.w3.org/TR/REC-html40'>
+<head>
+    <meta charset="utf-8">
+    <title>Comprehensive Project Portfolio Report: Quantira Content OS</title>
+    <!--[if gte mso 9]>
+    <xml>
+     <w:WordDocument>
+      <w:View>Print</w:View>
+      <w:Zoom>100</w:Zoom>
+      <w:DoNotOptimizeForBrowser/>
+     </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+        /* Word page layout and margins */
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in 1.0in 1.0in 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Typography & Styles */
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            color: #333333;
+            line-height: 1.5;
+        }
+        
+        h1 {
+            font-family: 'Georgia', serif;
+            color: #1a365d;
+            font-size: 26pt;
+            text-align: center;
+            margin-top: 100px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .subtitle {
+            font-size: 14pt;
+            color: #4a5568;
+            text-align: center;
+            margin-bottom: 150px;
+        }
+
+        .cover-meta {
+            margin-top: 100px;
+            border-top: 2px solid #e2e8f0;
+            padding-top: 20px;
+            font-size: 11pt;
+            color: #4a5568;
+        }
+
+        .cover-meta table {
+            width: 100%;
+            border: none;
+        }
+
+        .cover-meta td {
+            border: none;
+            padding: 5px;
+        }
+
+        .page-break {
+            page-break-before: always;
+        }
+
+        h2 {
+            font-family: 'Georgia', serif;
+            color: #2b6cb0;
+            font-size: 18pt;
+            border-bottom: 2px solid #2b6cb0;
+            padding-bottom: 5px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: #2d3748;
+            font-size: 13pt;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 11pt;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-bottom: 15px;
+            padding-left: 25px;
+        }
+
+        li {
+            font-size: 11pt;
+            margin-bottom: 6px;
+        }
+
+        /* Callout Box styling */
+        .callout-box {
+            background-color: #f7fafc;
+            border-left: 5px solid #3182ce;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .callout-box p {
+            margin: 0;
+            color: #2b6cb0;
+            font-weight: bold;
+        }
+
+        /* Tables styling */
+        table.data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table.data-table th {
+            background-color: #2d3748;
+            color: #ffffff;
+            font-weight: bold;
+            text-align: left;
+            padding: 8px 12px;
+            border: 1px solid #4a5568;
+            font-size: 10pt;
+        }
+
+        table.data-table td {
+            padding: 8px 12px;
+            border: 1px solid #cbd5e0;
+            font-size: 10pt;
+            color: #4a5568;
+        }
+
+        table.data-table tr:nth-child(even) td {
+            background-color: #f7fafc;
+        }
+
+        .code-block {
+            font-family: 'Consolas', 'Courier New', monospace;
+            background-color: #edf2f7;
+            padding: 10px;
+            border: 1px solid #cbd5e0;
+            font-size: 9.5pt;
+            margin: 10px 0;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="Section1">
+        
+        <!-- COVER PAGE -->
+        <div>
+            <h1>QUANTIRA CONTENT OS</h1>
+            <p class="subtitle">A Full-Stack Enterprise Content Operations, Workflow Automation, & Client Portal Application</p>
+            
+            <div class="cover-meta">
+                <table>
+                    <tr>
+                        <td><strong>Document Version:</strong> 1.0.0 (Production Build)</td>
+                        <td><strong>Prepared By:</strong> Engineering Team</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Client Name:</strong> Quantira Portfolio Project</td>
+                        <td><strong>Release Date:</strong> July 31, 2026</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- PROBLEM STATEMENT -->
+        <section>
+            <h2>1. Problem Statement</h2>
+            <p>Modern digital marketing agencies and creative studios suffer from high operational latency due to the lack of unified coordination. Deliverables pass through a loose web of emails, chat channels, shared documents, design boards, and individual platform dashboards. This creates:</p>
+            <ul>
+                <li><strong>Approval Bottlenecks:</strong> Delays in campaigns because design feedback and editorial approvals get buried in clients' crowded inboxes.</li>
+                <li><strong>Version Control Failures:</strong> Creative assets are frequently posted using incorrect draft formats due to unsynchronized asset folders.</li>
+                <li><strong>Opaque Reporting:</strong> Consolidating post analytics (reach, impressions, leads, revenue) is manually executed via spreadsheets, meaning clients only see ROI weeks after campaigns conclude.</li>
+            </ul>
+            <p>Quantira Content OS solves this by unifying creative intake, kanban production, editorial approvals, and post-publish analytics telemetry into a single, cohesive, role-based platform.</p>
+        </section>
+
+        <!-- DETAILED FUNCTIONALITY DOCUMENT -->
+        <section>
+            <h2>2. Detailed Functionality Document</h2>
+            <p>Quantira Content OS provides a comprehensive operational pipeline partitioned into two main experiences:</p>
+            
+            <h3>A. Sandboxed Client Portal</h3>
+            <p>Clients are securely isolated to their own dashboard view containing the following core modules:</p>
+            <ul>
+                <li><strong>Performance Telemetry Dashboard:</strong> Visualizes client impressions, reach, link clicks, leads, and generated revenue. Next.js server-side helpers pull these statistics dynamically.</li>
+                <li><strong>Editorial Content Calendar:</strong> Displays upcoming scheduled posts in a grid. Clicking on a post opens a detail card housing the copywriting captions, platform flags, and a direct URL to review the creative asset (Canva/Drive).</li>
+                <li><strong>One-Click Approval Interface:</strong> Clients can review the post directly inside the calendar and click "Approve" (which transitions the post status to 'Approved' and sets approval date) or request modifications.</li>
+                <li><strong>Intake Request Hub:</strong> Clients can submit requests for new creative briefs (defining platforms, type, objectives, brief text, due dates, and priorities) directly into the database.</li>
+            </ul>
+
+            <h3>B. Creative Operations Console</h3>
+            <p>Internal staff use this interface to track work and coordinate production:</p>
+            <ul>
+                <li><strong>Kanban Board Pipeline:</strong> Move content items dynamically through progress flags (Intake, Copywriting, Designing, Audit, Client Review, Published).</li>
+                <li><strong>QA Scorecard Module:</strong> Quality reviewers grade posts across Reach Potential, Hook Style, Lead Quality, and Call-To-Action (CTA) strength. The system calculates a weighted overall quality score out of 10.</li>
+                <li><strong>Campaign Configuration:</strong> Admin and Account Managers set up campaigns, allocate budgets, track expected revenues, and assign roles.</li>
+            </ul>
+        </section>
+
+        <!-- USE CASES -->
+        <section>
+            <h2>3. Use Cases</h2>
+            
+            <h3>Use Case 1: Client Brief Intake</h3>
+            <p><strong>Actor:</strong> Client Stakeholder</p>
+            <p><strong>Goal:</strong> Submit a brief for an upcoming product launch campaign.</p>
+            <p><strong>Flow:</strong> Client logs in -> Navigates to 'New Request' -> Fills platform target (e.g. LinkedIn), content objective, text description, due date, and priority -> Submits request. The request is logged in the DB as 'Open' and alert notification is generated for the Account Manager.</p>
+
+            <h3>Use Case 2: Copy & Design Production</h3>
+            <p><strong>Actor:</strong> Copywriter & Designer</p>
+            <p><strong>Goal:</strong> Add creative assets to a content draft.</p>
+            <p><strong>Flow:</strong> Copywriter claims the drafted item -> Fills caption text and hashtags -> Designer adds Canva graphics link -> Reviewer receives automated state change notification.</p>
+
+            <h3>Use Case 3: Quality Review Scoring</h3>
+            <p><strong>Actor:</strong> Reviewer</p>
+            <p><strong>Goal:</strong> Verify content quality and brand safety prior to client exposure.</p>
+            <p><strong>Flow:</strong> Reviewer accesses the post -> Fills in scores (1-10) for Reach, Hook, and CTA -> System calculates overall grade -> Post is approved for client review and displays on the calendar.</p>
+
+            <h3>Use Case 4: Client Approval & Sign-Off</h3>
+            <p><strong>Actor:</strong> Client Stakeholder</p>
+            <p><strong>Goal:</strong> Sign off on a post scheduled for publication.</p>
+            <p><strong>Flow:</strong> Client opens the interactive editorial calendar -> Clicks the post -> Reviews visual asset and copy -> Clicks 'Approve'. Post is flagged as 'Approved', and ready for publishing.</p>
+        </section>
+
+        <!-- KEY FEATURES -->
+        <section>
+            <h2>4. Key Features</h2>
+            <ul>
+                <li><strong>Role-Based Access Control (RBAC):</strong> Secure routing checks block clients from accessing agency financials, billing databases, and backend administrative panels.</li>
+                <li><strong>Automated Database Seeding:</strong> Schema setup includes predefined seed models for admins, creative staff, default campaigns, and historical metrics.</li>
+                <li><strong>Telemetry Ingestion:</strong> Dynamically calculates lead generation cost and campaign ROI in real time.</li>
+                <li><strong>Edge Middleware Guarding:</strong> Performs session token lookup at the edge to optimize redirect latency.</li>
+            </ul>
+        </section>
+
+        <!-- TECHNOLOGY STACK -->
+        <section>
+            <h2>5. Technology Stack Used</h2>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Layer</th>
+                        <th>Technology</th>
+                        <th>Purpose / Application</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Web Framework</strong></td>
+                        <td>Next.js 14.2.1 (React 18)</td>
+                        <td>Server-side rendering, App Router routing, and client views.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>UI Component System</strong></td>
+                        <td>Ant Design (Antd)</td>
+                        <td>Interactive grids, editorial calendars, forms, and tables.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Styling</strong></td>
+                        <td>TailwindCSS & Vanilla CSS</td>
+                        <td>Modern typography, responsive layout styling.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Database Engine</strong></td>
+                        <td>SQLite</td>
+                        <td>Self-contained, relational SQL database.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ORM Layer</strong></td>
+                        <td>Prisma ORM</td>
+                        <td>Type-safe database schema creation and seed scripts.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Authentication</strong></td>
+                        <td>NextAuth.js (v5 Beta)</td>
+                        <td>Role-based JWT session token handling and cookie routing.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Analytics Subsystem</strong></td>
+                        <td>Python Streamlit 1.58.0</td>
+                        <td>Alternative admin interface for data charting.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hosting</strong></td>
+                        <td>Vercel</td>
+                        <td>Cloud hosting.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <div class="page-break"></div>
+
+        <!-- API DOCUMENTATION -->
+        <section>
+            <h2>6. API Documentation</h2>
+            <p>Quantira Content OS implements structured JSON REST endpoints. Key routes include:</p>
+            
+            <h3>A. Content Requests Endpoint (`/api/requests`)</h3>
+            <p>Handles the client intake briefs. Approving a request automatically creates production and performance database entries.</p>
+            <div class="code-block">
+GET /api/requests
+Response:
+[
+  {
+    "requestId": 1,
+    "requestedBy": "client@acmecorp.com",
+    "client": "Acme Corp",
+    "platform": "LinkedIn",
+    "contentType": "Infographic",
+    "priority": "High",
+    "brief": "Q3 product update brief...",
+    "status": "Open"
+  }
+]
+            </div>
+            <div class="code-block">
+PUT /api/requests
+Body:
+{
+  "requestId": "1",
+  "status": "Approved"
+}
+Response: 200 OK (Triggers automatic creation of ContentMaster draft + Production record)
+            </div>
+
+            <h3>B. Approvals Endpoint (`/api/approvals`)</h3>
+            <p>Tracks client signatures and comments.</p>
+            <div class="code-block">
+PUT /api/approvals
+Body:
+{
+  "contentId": "CNT-001",
+  "approvalStatus": "Approved"
+}
+Response:
+{
+  "contentId": "CNT-001",
+  "approvalStatus": "Approved",
+  "finalApprovalDate": "2026-07-31T12:00:00.000Z"
+}
+            </div>
+        </section>
+
+        <!-- GITHUB & DEPLOYMENT LINKS -->
+        <section>
+            <h2>7. Deployment & Code References</h2>
+            <ul>
+                <li><strong>GitHub Repository:</strong> <a href="https://github.com/KarthikeyaMantha/SSM-tracker.git">https://github.com/KarthikeyaMantha/SSM-tracker.git</a></li>
+                <li><strong>Live Application Link:</strong> <a href="https://quantira-content-os.vercel.app">https://quantira-content-os.vercel.app</a></li>
+                <li><strong>Alternative Deployment Link:</strong> <a href="https://quantira-content-os-karthike.vercel.app">https://quantira-content-os-karthike.vercel.app</a></li>
+            </ul>
+        </section>
+
+        <!-- SCREENSHOTS OR DEMO VIDEO -->
+        <section>
+            <h2>8. Media References</h2>
+            <p>Below are references to local and deployed media illustrating the verification flow:</p>
+            <ul>
+                <li><strong>Client Dashboard View:</strong> [client_dashboard_1785500415185.png](file:///C:/Users/KARTHIKEYA%20MANTHA/.gemini/antigravity-ide/brain/cdad280f-8a59-48b3-8436-e93c37d32456/client_dashboard_1785500415185.png)</li>
+                <li><strong>Admin Statistics View:</strong> [logged_in_dashboard_1785500444161.png](file:///C:/Users/KARTHIKEYA%20MANTHA/.gemini/antigravity-ide/brain/cdad280f-8a59-48b3-8436-e93c37d32456/logged_in_dashboard_1785500444161.png)</li>
+                <li><strong>Login Verification Video (WebP format):</strong> [post_rebuild_login_verification_1785500383021.webp](file:///C:/Users/KARTHIKEYA%20MANTHA/.gemini/antigravity-ide/brain/cdad280f-8a59-48b3-8436-e93c37d32456/post_rebuild_login_verification_1785500383021.webp)</li>
+            </ul>
+        </section>
+
+        <!-- MY CONTRIBUTION TO THE PROJECT -->
+        <section>
+            <h2>9. Engineering Contributions (By Antigravity)</h2>
+            <p>During the deployment and verification phases, I performed the following key engineering contributions:</p>
+            <ol>
+                <li><strong>Dynamic Cookie Name & Security Fix (src/middleware.ts):</strong> Debugged the login session loop on HTTPS Vercel proxies where NextAuth was dropping non-secure cookies (`authjs.session-token`) while the edge router expected secure names (`__Secure-authjs.session-token`). Wrote a custom parser to dynamically check for both secure and insecure variants in incoming cookie requests.</li>
+                <li><strong>Vercel Build Target Optimization:</strong> Designed `.vercelignore` rules to exclude Streamlit python scripts (`app.py`, SQL initialize files) that Vercel's zero-config CLI was incorrectly trying to compile as python serverless functions, resolving build failures.</li>
+                <li><strong>Database Config & Vercel Project Linking:</strong> Created a clean project scope configuration on Vercel CLI, injecting production variables (`DATABASE_URL`, `AUTH_SECRET`, `NEXTAUTH_SECRET`, `AUTH_TRUST_HOST`, `GEMINI_API_KEY`) to ensure successful Next.js serverless route deployment and Prisma DB pushes/seeds.</li>
+                <li><strong>Source Code Setup:</strong> Standardized and pushed local workspace revisions onto your new target GitHub repository `SSM-tracker`.</li>
+            </ol>
+        </section>
+
+    </div>
+</body>
+</html>
