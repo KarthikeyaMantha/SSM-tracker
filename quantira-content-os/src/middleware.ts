@@ -3,12 +3,20 @@ import type { NextRequest } from "next/server"
 import { getToken } from "next-auth/jwt"
 
 export async function middleware(req: NextRequest) {
-  const hasSecureCookie = req.cookies.has("__Secure-next-auth.session-token")
-  const secureCookie = hasSecureCookie || req.headers.get("x-forwarded-proto") === "https"
+  const hasSecureNextAuthCookie = req.cookies.has("__Secure-next-auth.session-token")
+  const hasSecureAuthjsCookie = req.cookies.has("__Secure-authjs.session-token")
+  const hasAuthjsCookie = req.cookies.has("authjs.session-token")
+
+  const secureCookie = hasSecureNextAuthCookie || hasSecureAuthjsCookie || req.headers.get("x-forwarded-proto") === "https"
+  const isAuthjs = hasSecureAuthjsCookie || hasAuthjsCookie
+
   const token = await getToken({ 
     req, 
     secret: process.env.NEXTAUTH_SECRET || "some-super-secret-key-at-least-32-chars-long",
-    secureCookie
+    secureCookie,
+    cookieName: isAuthjs 
+      ? (secureCookie ? "__Secure-authjs.session-token" : "authjs.session-token")
+      : (secureCookie ? "__Secure-next-auth.session-token" : "next-auth.session-token")
   })
   const { pathname } = req.nextUrl
 
