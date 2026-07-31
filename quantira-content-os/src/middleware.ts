@@ -10,14 +10,27 @@ export async function middleware(req: NextRequest) {
   const secureCookie = hasSecureNextAuthCookie || hasSecureAuthjsCookie || req.headers.get("x-forwarded-proto") === "https"
   const isAuthjs = hasSecureAuthjsCookie || hasAuthjsCookie
 
+  const secret = process.env.NEXTAUTH_SECRET || "some-super-secret-key-at-least-32-chars-long"
+
   const token = await getToken({ 
     req, 
-    secret: process.env.NEXTAUTH_SECRET || "some-super-secret-key-at-least-32-chars-long",
+    secret,
     secureCookie,
     cookieName: isAuthjs 
       ? (secureCookie ? "__Secure-authjs.session-token" : "authjs.session-token")
       : (secureCookie ? "__Secure-next-auth.session-token" : "next-auth.session-token")
   })
+
+  // DEBUG LOGS
+  console.log("--- MIDDLEWARE DEBUG ---")
+  console.log("Path:", req.nextUrl.pathname)
+  console.log("Cookies list:", Array.from(req.cookies.getAll()).map(c => c.name))
+  console.log("Secret length:", secret?.length)
+  console.log("Token decoded successfully:", !!token)
+  if (token) {
+    console.log("User Role:", (token as any).role)
+  }
+
   const { pathname } = req.nextUrl
 
   // 1. Allow NextAuth authentication routes automatically
