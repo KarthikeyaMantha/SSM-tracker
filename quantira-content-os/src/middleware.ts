@@ -6,9 +6,27 @@ export async function middleware(req: NextRequest) {
   const hasSecureNextAuthCookie = req.cookies.has("__Secure-next-auth.session-token")
   const hasSecureAuthjsCookie = req.cookies.has("__Secure-authjs.session-token")
   const hasAuthjsCookie = req.cookies.has("authjs.session-token")
+  const hasNextAuthCookie = req.cookies.has("next-auth.session-token")
 
-  const secureCookie = hasSecureNextAuthCookie || hasSecureAuthjsCookie || req.headers.get("x-forwarded-proto") === "https"
-  const isAuthjs = hasSecureAuthjsCookie || hasAuthjsCookie
+  let cookieName = "next-auth.session-token"
+  let secureCookie = false
+
+  if (hasSecureAuthjsCookie) {
+    cookieName = "__Secure-authjs.session-token"
+    secureCookie = true
+  } else if (hasAuthjsCookie) {
+    cookieName = "authjs.session-token"
+    secureCookie = false
+  } else if (hasSecureNextAuthCookie) {
+    cookieName = "__Secure-next-auth.session-token"
+    secureCookie = true
+  } else if (hasNextAuthCookie) {
+    cookieName = "next-auth.session-token"
+    secureCookie = false
+  } else {
+    secureCookie = req.headers.get("x-forwarded-proto") === "https"
+    cookieName = secureCookie ? "__Secure-authjs.session-token" : "authjs.session-token"
+  }
 
   const secret = process.env.NEXTAUTH_SECRET || "some-super-secret-key-at-least-32-chars-long"
 
@@ -16,9 +34,7 @@ export async function middleware(req: NextRequest) {
     req, 
     secret,
     secureCookie,
-    cookieName: isAuthjs 
-      ? (secureCookie ? "__Secure-authjs.session-token" : "authjs.session-token")
-      : (secureCookie ? "__Secure-next-auth.session-token" : "next-auth.session-token")
+    cookieName
   })
 
   // DEBUG LOGS
