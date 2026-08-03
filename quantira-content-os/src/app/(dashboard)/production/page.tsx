@@ -608,7 +608,7 @@ export default function ProductionPage() {
                         <div
                           key={item.contentId}
                           onClick={() => handleCardClick(item)}
-                          className="bg-white border border-slate-200 p-4 rounded-xl shadow-sm hover:shadow-md cursor-pointer relative"
+                          className="production-card bg-white border border-slate-200 p-4 rounded-xl shadow-sm hover:shadow-md cursor-pointer relative"
                         >
                           <div className="flex justify-between items-start gap-2 mb-2">
                             <Text className="font-bold text-slate-800 text-xs line-clamp-2">{item.content.contentTitle}</Text>
@@ -661,7 +661,7 @@ export default function ProductionPage() {
                                     {...provided.draggableProps}
                                     {...provided.dragHandleProps}
                                     onClick={() => handleCardClick(item)}
-                                    className={`bg-white border border-slate-200 p-4 rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer relative group ${
+                                    className={`production-card bg-white border border-slate-200 p-4 rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer relative group ${
                                       snapshot.isDragging ? 'rotate-2 shadow-lg border-blue-500 scale-102 ring-4 ring-blue-500/10' : ''
                                     }`}
                                   >

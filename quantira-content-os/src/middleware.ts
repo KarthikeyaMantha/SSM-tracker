@@ -2,6 +2,16 @@ import { NextResponse } from "next/server"
 import type { NextRequest } from "next/server"
 import { getToken } from "next-auth/jwt"
 
+// Clean up any localhost environment variables on Vercel to allow host-header auto-inference
+if (process.env.VERCEL) {
+  if (process.env.NEXTAUTH_URL?.includes("localhost")) {
+    delete process.env.NEXTAUTH_URL
+  }
+  if (process.env.AUTH_URL?.includes("localhost")) {
+    delete process.env.AUTH_URL
+  }
+}
+
 export async function middleware(req: NextRequest) {
   const hasSecureNextAuthCookie = req.cookies.has("__Secure-next-auth.session-token")
   const hasSecureAuthjsCookie = req.cookies.has("__Secure-authjs.session-token")

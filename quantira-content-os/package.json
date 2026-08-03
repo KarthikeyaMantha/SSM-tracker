@@ -26,6 +26,7 @@
     "tailwind-merge": "^2.2.2"
   },
   "devDependencies": {
+    "@next/swc-wasm-nodejs": "^14.2.1",
     "@playwright/test": "^1.61.1",
     "@types/bcryptjs": "^2.4.6",
     "@types/node": "^20.12.7",

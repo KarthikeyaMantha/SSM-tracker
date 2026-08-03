@@ -10,7 +10,7 @@ if (process.env.NODE_ENV === "production") {
 let databaseUrl = process.env.DATABASE_URL || "file:./dev.db";
 
 // On Vercel, copy the read-only bundled DB to the writable /tmp directory at runtime
-if (process.env.NODE_ENV === "production" || process.env.VERCEL) {
+if (process.env.VERCEL) {
   const bundledDbPath = path.join(process.cwd(), "prisma/dev.db");
   const writableDbPath = "/tmp/dev.db";
 

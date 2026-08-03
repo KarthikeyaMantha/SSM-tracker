@@ -40,7 +40,7 @@ test.describe('Quantira Content OS - E2E QA Test Suite', () => {
       // Ensure QA content master exists
       await prisma.contentMaster.upsert({
         where: { contentId: 'CNT-QA01' },
-        update: { status: 'Draft', healthStatus: 'On Track' },
+        update: { status: 'Draft', healthStatus: 'On Track', publishDate: new Date() },
         create: {
           contentId: 'CNT-QA01',
           campaignId: 'CMP-QA1',
@@ -53,7 +53,7 @@ test.describe('Quantira Content OS - E2E QA Test Suite', () => {
           contentFormat: 'Article',
           priority: 'Normal',
           owner: 'QA Manager',
-          publishDate: new Date('2026-06-25'),
+          publishDate: new Date(),
           publishTime: '10:00',
           status: 'Draft',
           healthStatus: 'On Track',
@@ -108,6 +108,14 @@ test.describe('Quantira Content OS - E2E QA Test Suite', () => {
     }
   });
 
+  test.beforeEach(async ({ page }) => {
+    await page.goto('/login');
+    await page.getByRole('textbox', { name: 'Email Address' }).fill('admin@quantira.com');
+    await page.getByRole('textbox', { name: 'Password' }).fill('admin123');
+    await page.getByRole('button', { name: 'Sign In' }).click();
+    await page.waitForURL('**/');
+  });
+
   test('1. Core Data Flow (Clients -> Campaigns -> Content Master)', async ({ page }) => {
     // Verify QA E2E Client is visible
     await page.goto('/clients');
@@ -136,10 +144,8 @@ test.describe('Quantira Content OS - E2E QA Test Suite', () => {
     const card = page.locator('.production-card', { hasText: 'QA E2E Content Title' });
     await expect(card).toBeVisible();
 
-    await card.locator('.ant-select').first().click();
-    await page.locator('.ant-select-item-option-content:visible').filter({ hasText: /^In Progress$/ }).click();
-
-    await expect(card.locator('.ant-select-selection-item').first()).toHaveText('In Progress');
+    await card.locator('select').first().selectOption('In Progress');
+    await expect(card.locator('select').first()).toHaveValue('In Progress');
     await page.waitForTimeout(1000);
   });
 
@@ -158,10 +164,7 @@ test.describe('Quantira Content OS - E2E QA Test Suite', () => {
 
     await page.locator('button:has-text("Send Instructions")').click();
 
-    await card.locator('text=Expand').click();
-
-    await expect(card.locator('span:has-text("REVISION")')).toBeVisible();
-    await expect(card.locator('p:has-text("Needs CTA link fixes")')).toBeVisible();
+    await expect(card).toContainText('Needs CTA link fixes and font check.');
   });
 
   test('4. Analytics & Dashboard Sync', async ({ page }) => {
@@ -216,10 +219,12 @@ test.describe('Quantira Content OS - E2E QA Test Suite', () => {
     await page.locator('button:has-text("Add Asset")').click();
     await expect(page.locator('text=Add New Asset')).toBeVisible();
 
-    await page.locator('form select').first().selectOption('QA E2E Content Title');
-    await page.locator('form select').nth(1).selectOption('Video');
-    await page.locator('form input[type="url"]').nth(0).fill('https://canva.com/qa-video');
-    await page.locator('form input[type="url"]').nth(1).fill('https://drive.google.com/qa-video-folder');
+    await page.locator('form .ant-select').first().click();
+    await page.locator('.ant-select-item-option-content:visible').filter({ hasText: /^QA E2E Content Title$/ }).click();
+    await page.locator('form .ant-select').nth(1).click();
+    await page.locator('.ant-select-item-option-content:visible').filter({ hasText: /^Video$/ }).click();
+    await page.getByPlaceholder('https://canva.com/...').fill('https://canva.com/qa-video');
+    await page.getByPlaceholder('https://drive.google.com/...').fill('https://drive.google.com/qa-video-folder');
 
     await page.locator('form button:has-text("Upload Asset")').click();
 

@@ -3,7 +3,18 @@ import CredentialsProvider from "next-auth/providers/credentials"
 import { db } from "@/lib/db"
 import bcrypt from "bcryptjs"
 
+// Clean up any localhost environment variables on Vercel to allow host-header auto-inference
+if (process.env.VERCEL) {
+  if (process.env.NEXTAUTH_URL?.includes("localhost")) {
+    delete process.env.NEXTAUTH_URL
+  }
+  if (process.env.AUTH_URL?.includes("localhost")) {
+    delete process.env.AUTH_URL
+  }
+}
+
 export const { handlers: { GET, POST }, auth, signIn, signOut } = NextAuth({
+  trustHost: true,
   providers: [
     CredentialsProvider({
       name: "credentials",
